@@ -1,0 +1,6 @@
+flask==2.0.1
+python-docx==0.8.11
+PyPDF2==1.26.0
+openai==0.27.0
+matplotlib==3.4.3
+seaborn==0.11.2

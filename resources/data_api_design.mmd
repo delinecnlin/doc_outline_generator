@@ -1,0 +1,22 @@
+
+    classDiagram
+        class FileProcessor{
+            +str file_path
+            +str file_type
+            +__init__(file_path: str)
+            +process_file(): str
+        }
+        class DocGenerator{
+            +str outline
+            +dict project_info
+            +__init__(outline: str, project_info: dict)
+            +generate_doc(): str
+        }
+        class AIModel{
+            +str template_text
+            +__init__(template_text: str)
+            +generate_outline(): str
+        }
+        FileProcessor "1" --> "1" AIModel: uses
+        AIModel "1" --> "1" DocGenerator: uses
+    

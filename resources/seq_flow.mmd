@@ -1,0 +1,17 @@
+
+    sequenceDiagram
+        participant U as User
+        participant A as App
+        participant F as FileProcessor
+        participant M as AIModel
+        participant D as DocGenerator
+        U->>A: Upload file
+        A->>F: process_file()
+        F-->>A: Return template_text
+        A->>M: generate_outline(template_text)
+        M-->>A: Return outline
+        U->>A: Input project_info
+        A->>D: generate_doc(outline, project_info)
+        D-->>A: Return doc_path
+        U->>A: Preview doc
+    
